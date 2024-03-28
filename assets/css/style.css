@@ -17,6 +17,8 @@
 }
 
 
+
+
 h1 {
     font-size: 3.2em;
 }
@@ -41,22 +43,44 @@ a {
 
 }
 
-.btn {
-    color: white;
-    font-weight: 700;
-    padding: 15px 10px;
-    border-radius: 10px;
-    background-color: var(--rocky);
-    text-align: center;
+
+.buttonsshadowtransition {
+    position: relative;
     width: 200px;
-}
+    height: 50px;
+  }
+  
+.buttonDiv {
+    cursor: pointer;
+    top: -12px;
+    left: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rocky);
+    position: absolute;
+    transition: 250ms ease-in-out;
+    p {
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        height: 100%;
+    }
+  }
 
-.btn:hover {
-    color: var(--rocky);
-    background-color: rgb(145, 217, 36);
-}
+.buttonDiv:hover {
+    top: 0;
+    left: 0;
+  }
 
-
+.shadowDiv {
+    border-radius: 10px;
+    height: 100%;
+    background-color: #91d924;
+  }
 
 header {
 
@@ -76,8 +100,19 @@ header {
             height: 50px;
         }
 
-    }
 
+
+    .navbar-telefon {
+            
+        display: none;
+        details > summary {
+            list-style: none;
+          }
+    /* Pjesa Per Me hek Shigjeten te details */       
+    details summary::-webkit-details-marker {
+            display:none;
+          }
+    }
 
 
     ul {
@@ -124,6 +159,7 @@ header {
 
     }
 
+}
 
 
 }
@@ -151,6 +187,8 @@ main {
                 padding: 20px 0px 40px;
             }
 
+            
+
 
         }
 
@@ -177,20 +215,15 @@ main {
 }
 
 #plans {
-
+  
     .container {
         padding: 100px 0px;
 
 
         .planscards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
 
             .plancard {
-
-                width: 300px;
+                margin: 5px;
                 border-radius: 25px;
 
             }
@@ -236,6 +269,7 @@ main {
                 li:before {
                     color: var(--greeny);
                 }
+                
             }
 
             .reddish {
@@ -320,21 +354,20 @@ main {
             padding: 50px 0px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: center;
 
-            gap: 20px;
+            gap: 50px;
 
 
             .concard {
+                display: flex;
+                flex-direction: column;
                 background-color: white;
                 width: 300px;
                 height: 350px;
                 border-radius: 25px;
                 padding: 40px 40px 50px;
-                display: flex;
-                flex-direction: column;
                 box-shadow: 0 0 20px rgba(0, 0, 0, 0.167);
-
                 img {
                     margin-top: auto;
                     margin-left: -15px;
@@ -349,29 +382,16 @@ main {
 }
 
 #quote {
-    .container {
+
+
+    .container {     
         padding: 100px 0;
 
-        .quote-markstart {
-            z-index: 0;
-            margin-bottom: -50px;
-            /* Position the start quotation mark to the left of the quote text */
-        }
-
+      
         .quote-by-author {
+            margin-top:25px;
             text-align: center;
             margin-bottom: 70px;
-            z-index: 1;
-
-        }
-
-        .quote-markend {
-            display: flex;
-            position: relative;
-            margin-left: auto;
-            z-index: -1;
-            margin-top: -150px;
-            rotate: 180deg;
 
         }
 
@@ -410,13 +430,12 @@ main {
             padding: 50px 0px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-
-            gap: 20px;
+            justify-content: center;
+            gap: 50px;
 
 
             .benefitcard {
-
+                
                 background-color: white;
                 width: 300px;
                 height: 400px;
@@ -480,7 +499,7 @@ main {
 
         }
 
-        .btn {
+        .buttonsshadowtransition {
             margin: 0px auto;
             display: block;
         }
@@ -578,7 +597,7 @@ main {
             }
         }
 
-        .btn {
+        .buttonsshadowtransition {
             display: block;
             margin: 0 auto;
         }
@@ -642,15 +661,15 @@ main {
             padding: 50px 0px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 20px;
+            justify-content: center;
+            gap: 50px;
 
             .pricecard {
-
-
                 width: 300px;
                 border-radius: 25px;
                 background-color: white;
+
+                /* titulli i kardes */
 
                 .plantitle {
                     display: flex;
@@ -671,6 +690,8 @@ main {
 
                 }
 
+                /* Kontenti i kardes  */
+
                 .content {
                     display: flex;
                     flex-direction: column;
@@ -689,9 +710,12 @@ main {
 
                     }
 
+                /* titulli  */
 
                     .endcontent {
                         margin-top: auto;
+
+                    /* Konteti i Cmimeve  */
 
                         .contentprices {
                             display: flex;
@@ -715,18 +739,15 @@ main {
 
 
 
-                    .btn {
-                        display: block;
+                    .buttonsshadowtransition {
                         margin: 0 auto;
-                        width: 90%;
                     }
 
                     .link {
                         display: block;
                         margin: 0 auto;
-
-                        text-align: center;
                         margin-top: 10px;
+                        text-align: center;
 
                     }
 
@@ -767,6 +788,11 @@ main {
                 li:before {
                     color: var(--greeny);
                 }
+                .shadowDiv {
+                    background-color: var(--greeny);
+                  }
+
+
             }
 
 
@@ -787,6 +813,10 @@ main {
                 li:before {
                     color: #FE6670;
                 }
+
+                .shadowDiv {
+                    background-color: #FE6670;
+                  }
             }
 
             .yellowish {
@@ -811,6 +841,10 @@ main {
                 li:before {
                     color: #FF9900;
                 }
+
+                .shadowDiv {
+                    background-color: #FF9900;
+                  }
             }
 
             .bluish {
@@ -835,6 +869,10 @@ main {
                 li:before {
                     color: #2963FE;
                 }
+
+                .shadowDiv {
+                    background-color: #2963FE;
+                  }
             }
 
 
@@ -901,12 +939,38 @@ footer {
 
 
 @media screen and (max-width:768px) {
+    
+    header {
+        .container {
+
+            .pc-screen {
+                display: none;
+            }
+
+            .navbar-telefon {
+                display:inline;
+                ul {
+
+                    width: 200px;
+                    margin-left: -150px;
+                    margin-top:5px;
+                    position: absolute;
+                    flex-direction: column;
+                    background-color: white;
+                    border: 0.5px solid black;
+                    border-radius: 25px;
+                    li {
+                        margin-top: 10px;
+                        margin-bottom: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+    
     .container {
         width: 350px;
-    }
-
-    nav {
-        display: none;
     }
 
     #contribution {
@@ -920,18 +984,12 @@ footer {
     #quote {
         .container {
 
-            .quote-markstart {
-                width: 100px;
-            }
-
             .quote-by-author {
                 font-size: 0.5em;
                 margin-bottom: 100px;
             }
 
-            .quote-markend {
-                width: 100px;
-            }
+          
 
             .author {
                 font-size: 0.7em;
@@ -979,12 +1037,25 @@ footer {
 
     }
 
+    #plans {
+        .container{
+            .planscards{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                gap: 20px;
+                width: 100%;
+            }
+        }   
+    }
+
+
 }
 
 @media screen and (min-width:768px) {
     .container {
         width: 868px;
     }
+
     main {
         .container {
             .illustration{
@@ -992,18 +1063,67 @@ footer {
             }
         }
     }
+
+    #author {
+        .container {
+            justify-content: center;
+            .author {
+                h1 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                    margin-bottom: 40px;
+                }
+
+
+            }
+
+
+        }
+
+    }
+
+    #plans {
+        .container{
+            .planscards{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 20px;
+                width: 100%;
+            }
+        }   
+    }
+
 }
 
 @media screen and (min-width:1200px) {
     .container {
         width: 1300px;
     }
+
     main {
         .container {
             .illustration{
                 width: 600px;
             }
         }
+    }
+
+    #plans {
+        .container{
+            .planscards{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 20px;
+                width: 100%;
+
+                .greenish {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+            }
+        }   
     }
 
 }
